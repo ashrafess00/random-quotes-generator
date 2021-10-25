@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap");
+:root {
+  --mainColor: blue;
+  --radius: 7px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 1s;
+  transform: 1s;
+}
+body {
+  background-color: var(--mainColor);
+  font-family: "PT Sans", sans-serif;
+}
+p {
+  color: var(--mainColor);
+  font-size: 2rem;
+  display: flex;
+  transition: 1s;
+  opacity: 1;
+}
+@media (max-width: 600px) {
+  p {
+    font-size: 1rem;
+  }
+}
+.pp_anim {
+  animation: gg 1s forwards;
+}
+@keyframes gg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.quote {
+  color: var(--mainColor);
+  font-size: 1.8rem;
+  vertical-align: middle;
+  align-self: flex-start;
+  margin-top: 7px;
+  margin-right: 0.5rem;
+  transition: initial;
+}
+.card {
+  width: 60%;
+  background: white;
+  height: auto;
+  padding: 4rem;
+  margin: auto;
+  border-radius: var(--radius);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes gy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.flex {
+  display: flex;
+}
+
+.flex button {
+  border: none;
+}
+
+.newQuote {
+  margin-left: auto;
+  margin-right: 0;
+  align-self: flex-end;
+  height: 3rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.btn {
+  background: var(--mainColor);
+  padding: 0.56rem;
+  color: white;
+}
+
+.author {
+  margin: auto;
+  display: block;
+  text-align: end;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--mainColor);
+}
+
+.quoteContainer {
+  display: flex;
+}
+
+a {
+  background-color: var(--mainColor);
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius);
+  margin-right: 1rem;
+}
+a:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 600px) {
+  .flex {
+    margin-top: 2rem;
+  }
+  .newQuote {
+    height: 2rem;
+    font-size: 0.7rem;
+  }
+
+  a {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    padding: 1rem;
+    width: 80%;
+  }
+  .flex {
+    display: grid;
+    color: red;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  a {
+    margin-right: initial;
+  }
+  .newQuote {
+    margin-left: initial;
+  }
+}
