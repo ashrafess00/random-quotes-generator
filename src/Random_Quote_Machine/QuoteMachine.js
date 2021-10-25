@@ -52,34 +52,52 @@ const QuoteMachine = () => {
   }
 
   return (
-    <div className="card">
-      <div className="quoteContainer">
-        <FontAwesomeIcon icon={faQuoteLeft} className="quote" />
-        <p>{data.content}</p>
+    <>
+      <div className="card">
+        <div className="quoteContainer">
+          <FontAwesomeIcon icon={faQuoteLeft} className="quote" />
+          <p>{data.content}</p>
+        </div>
+        <span className="author">- {data.author}</span>
+        <div className="flex">
+          <a
+            href={`https://twitter.com/intent/tweet?text="${data.content}"  -${data.author}&hashtags=quotes`}
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faTwitter} className="icon" />
+          </a>
+          <a
+            href={`http://tumblr.com/widgets/share/tool?posttype=quote&tags=quotes&caption=Unknown&title=myTitle&content=${data.content}&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`}
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faTumblr} className="icon" />
+          </a>
+          {/* //////////////////////// */}
+          <a href={`whatsapp://send?text=${data.content}`} target="_blank">
+            <FontAwesomeIcon icon={faWhatsapp} className="icon" />
+          </a>
+          <button className="newQuote btn" onClick={() => randomQuote()}>
+            new Quote
+          </button>
+        </div>
       </div>
-      <span className="author">- {data.author}</span>
-      <div className="flex">
+      <div className="directed">
+        This freecodecamp challenge made by{" "}
         <a
-          href={`https://twitter.com/intent/tweet?text="${data.content}"  -${data.author}&hashtags=quotes`}
+          className="ashraf"
+          href="https://github.com/ashrafess00?tab=repositories"
+        >
+          ASHRAF ESSAOUDI
+        </a>
+        , check the project in{" "}
+        <a
+          href="https://github.com/ashrafess00/random-quotes-generator"
           target="_blank"
         >
-          <FontAwesomeIcon icon={faTwitter} className="icon" />
+          github
         </a>
-        <a
-          href={`http://tumblr.com/widgets/share/tool?posttype=quote&tags=quotes&caption=Unknown&title=myTitle&content=${data.content}&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`}
-          target="_blank"
-        >
-          <FontAwesomeIcon icon={faTumblr} className="icon" />
-        </a>
-        {/* //////////////////////// */}
-        <a href={`whatsapp://send?text=${data.content}`} target="_blank">
-          <FontAwesomeIcon icon={faWhatsapp} className="icon" />
-        </a>
-        <button className="newQuote btn" onClick={() => randomQuote()}>
-          new Quote
-        </button>
       </div>
-    </div>
+    </>
   );
 };
 

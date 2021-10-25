@@ -27,7 +27,7 @@ p {
   }
 }
 .pp_anim {
-  animation: gg 1s forwards;
+  animation: gg 2s forwards;
 }
 @keyframes gg {
   0% {
@@ -62,14 +62,6 @@ p {
   transform: translate(-50%, -50%);
 }
 
-@keyframes gy {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .flex {
   display: flex;
 }
@@ -155,4 +147,28 @@ a:last-child {
   .newQuote {
     margin-left: initial;
   }
+}
+
+.directed {
+  margin: auto;
+  color: var(--mainColor);
+  background-color: black;
+  text-align: center;
+}
+.directed a {
+  background-color: initial;
+  width: initial;
+  height: initial;
+  font-size: 1.5rem;
+  display: initial;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius);
+  margin-right: initial;
+  color: white;
+}
+
+span.ashraf {
+  font-size: 1.1rem;
+  color: white;
 }
